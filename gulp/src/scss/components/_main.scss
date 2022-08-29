@@ -1,0 +1,79 @@
+.block-image {
+  display: flex;
+  font-weight: wrap;
+  width: 70%;
+  justify-content: center;
+
+  .item {
+    width: 600px;
+    height: 300px;
+    margin: 5px;
+
+  }
+
+
+  .name {
+    // text-align: center;
+    background-color: black;
+    opacity: 0.6;
+    padding-top:10px ;
+
+    margin-top: 230px;
+
+    p{
+      margin-top: -4px;
+      color: rgb(235, 232, 233);
+      text-align:center;
+
+    }
+    .profession {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgb(235, 232, 233);
+
+.chat{
+  margin-left: 50px;
+}
+
+
+    }
+  }
+
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+padding: 5px;
+margin-bottom: 15px;
+}
+
+@for $i from 1 through 6 {
+  .item-#{$i} {
+    background-image: url(../img/picture/#{$i}.png);
+    background-repeat: no-repeat, repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+  .block-image {
+    display: flex;
+    flex-direction: column;
+    .item {
+      width: 300px;
+      height: 300px;
+      margin: 5px;
+
+    }
+  }
+
+
+}
+
+.container{
+  @import "../mixins/flex";
+}
